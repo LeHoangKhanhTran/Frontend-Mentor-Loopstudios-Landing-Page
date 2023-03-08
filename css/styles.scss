@@ -262,7 +262,7 @@ footer {
     header {
         position: relative;
         background-image: url("/images/desktop/image-hero.jpg");
-        aspect-ratio: 34/16;
+        aspect-ratio: 35/15.8;
 
         &::after {
             position: absolute;
@@ -288,7 +288,7 @@ footer {
 
     .logo {
         top: 5rem;
-        left: 12.5vw;
+        left: 12vw;
 
         & > img {
             transform: scale(1.1);
@@ -304,7 +304,7 @@ footer {
             top: -100px;
         }
         to {
-            top: 75px;
+            top: 70px;
         }
     }
     
@@ -313,7 +313,7 @@ footer {
             left: -100%;
         }
         to {
-            left: 36.5rem;
+            left: 36rem;
         }
     } 
 
@@ -353,7 +353,7 @@ footer {
     nav > ul {
         position: absolute;
         display: flex;
-        left: 62.2vw;
+        left: 59.5vw;
         padding-top: 100vh;
         background: transparent;
         animation: moveDown 1.5s forwards;
@@ -447,7 +447,7 @@ footer {
 
         & > span {
             bottom: 0;
-            padding: 9.5rem 3vw 0px 3vw;
+            padding: 9.5rem 1.8vw 0 3vw;
             font-size: 2.3rem;
             width: 100%; 
             height: 50%;
