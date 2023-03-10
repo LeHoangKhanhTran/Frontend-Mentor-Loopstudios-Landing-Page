@@ -41,11 +41,11 @@ header {
     }
 
     &-img {
-        content: url("/images/icon-hamburger.svg");
+        content: url("../images/icon-hamburger.svg");
     }
 
     &-toggle {
-        content: url("/images/icon-close.svg");
+        content: url("../images/icon-close.svg");
     }
 }
 
@@ -261,7 +261,7 @@ footer {
     
     header {
         position: relative;
-        background-image: url("/images/desktop/image-hero.jpg");
+        background-image: url("../images/desktop/image-hero.jpg");
         aspect-ratio: 35/15.8;
 
         &::after {

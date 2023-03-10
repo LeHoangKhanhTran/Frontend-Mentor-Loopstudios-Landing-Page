@@ -34,10 +34,10 @@ header {
   transform: scale(1.2);
 }
 .hamburger-img {
-  content: url("/images/icon-hamburger.svg");
+  content: url("../images/icon-hamburger.svg");
 }
 .hamburger-toggle {
-  content: url("/images/icon-close.svg");
+  content: url("../images/icon-close.svg");
 }
 
 @keyframes slidedown {
@@ -240,7 +240,7 @@ footer > ul li {
   }
   header {
     position: relative;
-    background-image: url("/images/desktop/image-hero.jpg");
+    background-image: url("../images/desktop/image-hero.jpg");
     aspect-ratio: 35/15.8;
   }
   header::after {
