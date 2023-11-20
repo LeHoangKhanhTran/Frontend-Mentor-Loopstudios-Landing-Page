@@ -25,6 +25,7 @@ header {
     top: 2.7rem;
     left: 1rem;
     z-index: 100;
+    cursor: pointer;
     img {
         transform: scale(0.9);
     }
@@ -35,7 +36,7 @@ header {
     top: 3.2rem;
     right: 1.8rem;
     z-index: 100;
-
+    cursor: pointer;
     img {
         transform: scale(1.2);
     }
@@ -113,10 +114,11 @@ li {
 header section {
     position: absolute;
     border: 3.5px solid white;
-    @include centerX;
+    left: 50%;
+    transform: translateX(-50%);
     top: 35%;
     justify-content: center;
-    padding: 25px;
+    padding: 4vw;
     color: white;
     text-transform: uppercase;
     font-size: 2.8rem;
@@ -143,7 +145,7 @@ main {
 .info {
    background-color: white;
    text-align: center;
-   padding: 3rem 3.1rem 2rem 3.1rem; 
+   padding: 3rem 2rem 2rem 2rem; 
    font-family: "Josefin Sans", sans-serif;
 }
 
@@ -276,18 +278,21 @@ footer {
         & section {
             position: absolute;
             border: 3.5px solid white;
+            left: 0px;
+            transform: none;
             top: 16vw;
             box-sizing: border-box;
-            width: 720px;
+            width: 45vw;
+            min-width: 300px;
             padding: 2.5vw 2.5vw;
-            font-size: 5.2rem;
+            font-size: 5.2vw;
             z-index: 100;
             animation: moveRight 1.5s forwards; 
         }
     }
 
     .logo {
-        top: 5rem;
+        top: 5vw;
         left: 12vw;
 
         & > img {
@@ -304,7 +309,7 @@ footer {
             top: -100px;
         }
         to {
-            top: 70px;
+            top: 5.2vw;
         }
     }
     
@@ -313,7 +318,7 @@ footer {
             left: -100%;
         }
         to {
-            left: 36rem;
+            left: 12vw;
         }
     } 
 
@@ -354,16 +359,17 @@ footer {
         position: absolute;
         display: flex;
         left: 59.5vw;
-        padding-top: 100vh;
         background: transparent;
+        padding-top: 0;
+        height: 1vw;
         animation: moveDown 1.5s forwards;
 
         & > li {
             position: relative;
             text-transform: none;
-            font-size: 1.2rem;  
+            font-size: 1.3vw;  
             font-weight: 700;
-            padding-top: 10px;
+            padding-top: 1vw;
         }
     }
     
@@ -380,12 +386,12 @@ footer {
 
     .info {
        position: absolute;
-       top: 13.5vw;
-       margin-left: 49vw;
+       padding: 4.5vw 3vw 0 4.5vw;
+       bottom: 0;
+       left: 70%;
        text-align: left;
        box-sizing: border-box;
-       padding: 6vw 14vw 0.5vw 6vw; 
-       min-width: 750px;
+       width: 35vw;
        font-family: "Josefin Sans", sans-serif;
        overflow-wrap: break-word;
        animation: transitionLeft 1.5s forwards paused;
@@ -393,10 +399,11 @@ footer {
     }
     
     h1 {
-        font-size: 3rem;
+        font-size: 2.9vw;
     }
 
     #info {
+        font-size: 1.1vw;
         line-height: 1.5;
     }
 
@@ -424,7 +431,7 @@ footer {
         margin-left: 0;
         transform: translateX(0%);
         width: 18.5vw;
-        height: 68vh;
+        height: 32vw;
         opacity: 0;
         animation: brighten 2s forwards paused;
         cursor: pointer;
@@ -446,9 +453,11 @@ footer {
         }
 
         & > span {
+            display: flex;
+            align-items: end;
+            padding: 0 2vw 30px 2vw;
             bottom: 0;
-            padding: 9.5rem 1.8vw 0 3vw;
-            font-size: 2.3rem;
+            font-size: 2vw;
             width: 100%; 
             height: 50%;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.652) , rgba(0, 0, 0, 0));
@@ -471,10 +480,12 @@ footer {
         margin-left: 75vw;
         border: 2px solid black;
         width: 10vw;
+        min-width: 80px;
         height: 5vh;
         font-size: 1rem;
         letter-spacing: 5px;
         top: 8rem;
+        font-size: 1.2vw;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
         &:hover {
@@ -485,10 +496,12 @@ footer {
     
     footer {
         position: absolute;
+        display: flex;
+        justify-content: space-between;
         box-sizing: border-box;
         text-align: left;
-        width: 100vw;
-        padding: 3.8rem 9vw;
+        width: 100%;
+        padding: 3.8rem 5vw;
 
         & > img {
             margin-top: 0px;
@@ -501,7 +514,7 @@ footer {
 
             & li {
                 position: relative;
-                font-size: 1.2rem;
+                font-size: 1.2vw;
                 padding: 5px 0 15px 0;
             }
         }
@@ -510,7 +523,7 @@ footer {
     .media {
         position: absolute;
         top: 20px;
-        right: 10rem;
+        right: 5vw;
         cursor: pointer;
         & span {
             position: relative;
@@ -529,11 +542,11 @@ footer {
     }
 
     footer > ul li::after, nav > ul li::after {
-        position: absolute;
+        position: relative;
+        top: 15px;
         display: none;
         @include centerX();
-        top: 2.2rem;
-        width: 25px;
+        width: 2vw;
         height: 2px;
         content: "";
         background-color: white;
@@ -546,7 +559,8 @@ footer {
     .copyright {
         position: absolute;
         top: 90px;
-        right: 11rem;
+        right: 5vw;
         padding: 1.7rem 0 0rem 0;
+        font-size: 1vw;
     }
 }
